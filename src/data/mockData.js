@@ -6,83 +6,95 @@ const supabase = createClient(
   process.env.REACT_APP_SUPABASE_KEY
 );
 
-console.log(supabase)
+// console.log(supabase)
+// const users = await supabase.from('users').select('*');
+
+// export const mockDataTeam = users
+
+export const mockDataTeam = async () => {
+  const dbt_members = await supabase.from('users').select('*');
+  console.log(dbt_members)
+  return dbt_members;
+  
+}
 
 
-export const mockDataTeam = [
-  {
-    id: 1,
-    name: "Gilton Bosco",
-    email: "giltwizy@gmail.com",
-    account: "01522488900",
-    phone: "06540808954",
-    access: "admin",
-  },
-  {
-    id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    account: "01528083900",
-    phone: "(421)314-2288",
-    access: "manager",
-  },
-  {
-    id: 3,
-    name: "Jaime Lannister",
-    email: "jaimelannister@gmail.com",
-    account: "01552084900",
-    phone: "(422)982-6739",
-    access: "user",
-  },
-  {
-    id: 4,
-    name: "Anya Stark",
-    email: "anyastark@gmail.com",
-    account: "01528083900",
-    phone: "(921)425-6742",
-    access: "admin",
-  },
-  {
-    id: 5,
-    name: "Daenerys Targaryen",
-    email: "daenerystargaryen@gmail.com",
-    account: "01528083900",
-    phone: "0715678567",
-    access: "user",
-  },
-  {
-    id: 6,
-    name: "Ever Melisandre",
-    email: "evermelisandre@gmail.com",
-    account: "01528083900",
-    phone: "0715678567",
-    access: "manager",
-  },
-  {
-    id: 7,
-    name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
-    account: "01528083900",
-    phone: "0715678567",
-    access: "user",
-  },
-  {
-    id: 8,
-    name: "Rossini Frances",
-    email: "rossinifrances@gmail.com",
-    account: "01528083900",
-    phone: "0715678567",
-    access: "user",
-  },
-  {
-    id: 9,
-    name: "Harvey Roxie",
-    email: "harveyroxie@gmail.com",
-    account: "01528083900",
-    phone: "0715678567",
-    access: "admin",
-  },
-];
+
+
+// export const mockDataTeam = [
+//   {
+//     id: 1,
+//     name: "Gilton Bosco",
+//     email: "giltwizy@gmail.com",
+//     account: "01522488900",
+//     phone: "06540808954",
+//     access: "admin",
+//   },
+//   {
+//     id: 2,
+//     name: "Cersei Lannister",
+//     email: "cerseilannister@gmail.com",
+//     account: "01528083900",
+//     phone: "(421)314-2288",
+//     access: "manager",
+//   },
+//   {
+//     id: 3,
+//     name: "Jaime Lannister",
+//     email: "jaimelannister@gmail.com",
+//     account: "01552084900",
+//     phone: "(422)982-6739",
+//     access: "user",
+//   },
+//   {
+//     id: 4,
+//     name: "Anya Stark",
+//     email: "anyastark@gmail.com",
+//     account: "01528083900",
+//     phone: "(921)425-6742",
+//     access: "admin",
+//   },
+//   {
+//     id: 5,
+//     name: "Daenerys Targaryen",
+//     email: "daenerystargaryen@gmail.com",
+//     account: "01528083900",
+//     phone: "0715678567",
+//     access: "user",
+//   },
+//   {
+//     id: 6,
+//     name: "Ever Melisandre",
+//     email: "evermelisandre@gmail.com",
+//     account: "01528083900",
+//     phone: "0715678567",
+//     access: "manager",
+//   },
+//   {
+//     id: 7,
+//     name: "Ferrara Clifford",
+//     email: "ferraraclifford@gmail.com",
+//     account: "01528083900",
+//     phone: "0715678567",
+//     access: "user",
+//   },
+//   {
+//     id: 8,
+//     name: "Rossini Frances",
+//     email: "rossinifrances@gmail.com",
+//     account: "01528083900",
+//     phone: "0715678567",
+//     access: "user",
+//   },
+//   {
+//     id: 9,
+//     name: "Harvey Roxie",
+//     email: "harveyroxie@gmail.com",
+//     account: "01528083900",
+//     phone: "0715678567",
+//     access: "admin",
+//   },
+// ];
 
 export const mockDataContacts = [
   {
